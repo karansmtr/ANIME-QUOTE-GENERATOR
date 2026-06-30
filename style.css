@@ -33,7 +33,7 @@ h1{
     font-weight: 600;
 }
 
-#author{
+h2{
     font-style: italic;
     font-weight: 200;
 }
@@ -44,7 +44,6 @@ h1{
     background-color: antiquewhite;
     padding: 10px;
     cursor: pointer;
-    /* background-color: brown; */
     text-transform: uppercase;
     width: 300px;
 }
