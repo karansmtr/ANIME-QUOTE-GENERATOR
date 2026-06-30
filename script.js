@@ -17,16 +17,23 @@ function getQuote() {
         return response.json()
     })
     .then((data) => {
-        console.log(JSON.stringify(data, null, 2))
-        const content = data.data.content;
-        const author = data.data.character.name;
-        const anime = data.data.anime.name;
-        quote.innerText = content || "NO QUOTE FOUND";
-        authoranime.innerText = author && anime ? `-${author} | -${anime}` : "NOTHING YET";
+        const content = data?.data?.content;
+        const author = data?.data?.character?.name;
+        const anime = data?.data?.anime?.name;
+        if(!content){
+            quote.innerHTML = "SERVER DOWN";
+            authoranime.innerText = "SERVER DOWN - TRY IN 5 MINUTES.";
+        }
+        else{
+            quote.innerText = content;
+            authoranime.innerText = `-${author} | -${anime}`;
+        }
         btn.disabled = false;
         btn.innerHTML = "GENERATE"
     })
-    .catch((error) => {console.log(`E:${error}`)})
+    .catch((error) => {
+        console.error(error);    
+    })
     
 }
 

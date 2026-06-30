@@ -46,6 +46,7 @@ h2{
     cursor: pointer;
     text-transform: uppercase;
     width: 300px;
+    color:brown;
 }
 
 #btn:hover{
