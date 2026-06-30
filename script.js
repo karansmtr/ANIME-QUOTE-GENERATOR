@@ -21,7 +21,7 @@ function getQuote() {
         const author = data?.data?.character?.name;
         const anime = data?.data?.anime?.name;
         if(!content){
-            quote.innerHTML = "SERVER DOWN";
+            quote.innerHTML = " \"SERVER DOWN\" ";
             authoranime.innerText = "SERVER DOWN - TRY IN 5 MINUTES.";
         }
         else{
